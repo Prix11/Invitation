@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Happy 2nd Anniversary, Angel 💕</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Baloo 2', cursive;
+      background: linear-gradient(-45deg, #ff6b9d, #c44569, #6c5ce7, #fd79a8, #e17055);
+      background-size: 400% 400%;
+      animation: gradient-dance 12s ease infinite;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      padding: max(1rem, env(safe-area-inset-top)) max(0.75rem, env(safe-area-inset-right)) max(1rem, env(safe-area-inset-bottom)) max(0.75rem, env(safe-area-inset-left));
+    }
+
+    @keyframes gradient-dance {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .hearts {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      animation: float-up linear infinite;
+      filter: drop-shadow(0 0 6px rgba(255,255,255,0.4));
+    }
+
+    @keyframes float-up {
+      0% { transform: translateY(105vh) rotate(0deg) scale(0.5); opacity: 0; }
+      8% { opacity: 0.7; }
+      92% { opacity: 0.7; }
+      100% { transform: translateY(-15vh) rotate(360deg) scale(1.2); opacity: 0; }
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(16px);
+      border: 3px solid rgba(255, 255, 255, 0.45);
+      border-radius: 32px;
+      padding: 2rem 2rem 2.25rem;
+      max-width: 480px;
+      width: 92%;
+      text-align: center;
+      box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.25),
+        0 0 0 6px rgba(255, 255, 255, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+      animation: card-bounce-in 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), max-width 0.4s ease;
+    }
+
+    @media (hover: hover) {
+      .card:hover { transform: rotate(-0.5deg) scale(1.01); }
+    }
+
+    .card.wide { max-width: min(640px, 100%); }
+    .card.shake { animation: card-shake 0.5s ease; }
+
+    @keyframes card-bounce-in {
+      0% { opacity: 0; transform: scale(0.7) translateY(40px); }
+      100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    @keyframes card-shake {
+      0%, 100% { transform: rotate(0); }
+      20% { transform: rotate(-2deg); }
+      40% { transform: rotate(2deg); }
+      60% { transform: rotate(-1deg); }
+      80% { transform: rotate(1deg); }
+    }
+
+    .progress {
+      display: flex;
+      justify-content: center;
+      gap: 0.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .progress-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.35);
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .progress-dot.active {
+      background: #fff;
+      transform: scale(1.4);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+    }
+
+    .progress-dot.done { background: #ffe066; }
+
+    .emoji {
+      font-size: 4rem;
+      margin-bottom: 0.5rem;
+      display: inline-block;
+      animation: emoji-wiggle 2.5s ease-in-out infinite;
+      cursor: default;
+      user-select: none;
+    }
+
+    .emoji:hover { animation: emoji-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1); }
+
+    @keyframes emoji-wiggle {
+      0%, 100% { transform: rotate(-5deg) scale(1); }
+      25% { transform: rotate(5deg) scale(1.08); }
+      50% { transform: rotate(-3deg) scale(1.05); }
+      75% { transform: rotate(4deg) scale(1.1); }
+    }
+
+    @keyframes emoji-pop {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.4) rotate(10deg); }
+      100% { transform: scale(1) rotate(0); }
+    }
+
+    h1 {
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      line-height: 1.35;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .subtitle {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.95);
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .name {
+      color: #ffe066;
+      font-weight: 700;
+      text-shadow: 0 0 20px rgba(255, 224, 102, 0.5);
+      display: inline-block;
+      animation: name-glow 2s ease-in-out infinite;
+    }
+
+    @keyframes name-glow {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .anniversary-badge {
+      display: inline-block;
+      background: linear-gradient(90deg, #ff6b9d, #ffe066, #ff6b9d);
+      background-size: 200% auto;
+      animation: shimmer 3s linear infinite;
+      border-radius: 50px;
+      padding: 0.4rem 1.1rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.06em;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 0% center; }
+      100% { background-position: 200% center; }
+    }
+
+    #invitation {
+      position: relative;
+    }
+
+    .dodge-arena {
+      position: relative;
+      min-height: 130px;
+      margin: 0.25rem 0;
+      pointer-events: none;
+    }
+
+    .dodge-arena .btn-no {
+      pointer-events: auto;
+    }
+
+    .button-stage {
+      position: relative;
+      z-index: 10;
+      min-height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .btn {
+      padding: 0.9rem 2rem;
+      border: none;
+      border-radius: 50px;
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.15rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+      position: relative;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+      min-height: 48px;
+    }
+
+    .btn:active:not(:disabled) { transform: scale(0.92) !important; }
+
+    .btn-yes {
+      background: linear-gradient(135deg, #fff 0%, #ffe8f0 100%);
+      color: #c44569;
+      box-shadow: 0 8px 0 #c44569, 0 12px 25px rgba(0, 0, 0, 0.2);
+      animation: btn-pulse 2s ease-in-out infinite;
+      z-index: 10;
+    }
+
+    .btn-yes:hover:not(:disabled) {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 12px 0 #c44569, 0 18px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-yes:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      animation: none;
+      box-shadow: 0 4px 0 #999, 0 8px 15px rgba(0, 0, 0, 0.1);
+      color: #888;
+    }
+
+    @keyframes btn-pulse {
+      0%, 100% { box-shadow: 0 8px 0 #c44569, 0 12px 25px rgba(0, 0, 0, 0.2); }
+      50% { box-shadow: 0 8px 0 #c44569, 0 12px 35px rgba(255, 107, 157, 0.5); }
+    }
+
+    .btn-no {
+      background: #fff;
+      color: #888;
+      border: 2px solid #ddd;
+      box-shadow: 0 6px 0 #bbb, 0 8px 18px rgba(0, 0, 0, 0.15);
+      z-index: 2;
+      opacity: 1;
+    }
+
+    .btn-no:hover:not(.dodging) {
+      transform: scale(1.05);
+    }
+
+    .btn-no.dodging {
+      position: absolute;
+      z-index: 1;
+      background: #fff;
+      color: #888;
+      border: 2px solid #ddd;
+      box-shadow: 0 4px 0 #bbb, 0 6px 14px rgba(0, 0, 0, 0.12);
+      transition: left 0.28s cubic-bezier(0.34, 1.56, 0.64, 1),
+                  top 0.28s cubic-bezier(0.34, 1.56, 0.64, 1),
+                  transform 0.28s ease;
+      transform: scale(0.7) rotate(10deg);
+      opacity: 1;
+      font-size: 0.8rem;
+      padding: 0.45rem 0.95rem;
+    }
+
+    .step { display: none; }
+    .step.show { display: block; animation: step-pop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1); }
+
+    @keyframes step-pop {
+      0% { opacity: 0; transform: scale(0.85); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .celebration h1 { font-size: 1.9rem; color: #ffe066; }
+    .celebration p { color: #fff; font-size: 1rem; line-height: 1.7; }
+
+    .sparkle {
+      font-size: 2rem;
+      margin: 0.75rem 0;
+      animation: sparkle-spin 3s linear infinite;
+    }
+
+    @keyframes sparkle-spin {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2) rotate(5deg); }
+    }
+
+    .pick-counter {
+      display: inline-block;
+      background: #ffe066;
+      color: #c44569;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.3rem 0.9rem;
+      border-radius: 50px;
+      margin-bottom: 0.75rem;
+      transform: scale(0);
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .pick-counter.show { transform: scale(1); animation: counter-bounce 0.5s cubic-bezier(0.34, 1.56, 0.64, 1); }
+
+    @keyframes counter-bounce {
+      0% { transform: scale(0); }
+      60% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    .chosen-activities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      justify-content: center;
+      margin: 0.75rem 0;
+    }
+
+    .chosen-activity {
+      display: inline-block;
+      padding: 0.45rem 0.9rem;
+      background: rgba(255, 255, 255, 0.3);
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      border-radius: 50px;
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      animation: chip-pop 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+    }
+
+    @keyframes chip-pop {
+      0% { opacity: 0; transform: scale(0) rotate(-10deg); }
+      100% { opacity: 1; transform: scale(1) rotate(0); }
+    }
+
+    .summary-section { margin: 1rem 0; }
+    .summary-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #ffe066;
+      margin-bottom: 0.5rem;
+    }
+
+    .location-header {
+      border-radius: 18px;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      animation: header-bob 3s ease-in-out infinite;
+    }
+
+    @keyframes header-bob {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+
+    .park-header {
+      background: linear-gradient(135deg, rgba(0, 120, 255, 0.5), rgba(0, 200, 255, 0.3));
+      border: 2px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .restaurant-header {
+      background: linear-gradient(135deg, rgba(255, 140, 50, 0.5), rgba(255, 200, 100, 0.3));
+      border: 2px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .location-name {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .location-sub { font-size: 0.72rem; color: rgba(255, 255, 255, 0.8); margin-top: 0.15rem; }
+
+    .activity-scroll {
+      max-height: 320px;
+      overflow-y: auto;
+      padding-right: 0.35rem;
+      margin-bottom: 0.75rem;
+      text-align: left;
+    }
+
+    .activity-scroll::-webkit-scrollbar { width: 6px; }
+    .activity-scroll::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 10px;
+    }
+
+    .category-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #ffe066;
+      margin: 1rem 0 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .category-label::before {
+      content: '✦';
+      font-size: 0.6rem;
+      animation: sparkle-spin 2s linear infinite;
+    }
+
+    .category-label:first-child { margin-top: 0; }
+
+    .activity-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.55rem;
+    }
+
+    .restaurant-grid { grid-template-columns: 1fr; }
+    .restaurant-card .activity-name { font-size: 0.76rem; }
+
+    .activity-card {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 0.75rem;
+      background: rgba(255, 255, 255, 0.15);
+      border: 2px solid rgba(255, 255, 255, 0.25);
+      border-radius: 16px;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      text-align: left;
+      animation: card-stagger 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+      min-height: 48px;
+    }
+
+    @keyframes card-stagger {
+      0% { opacity: 0; transform: translateY(12px) scale(0.9); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .activity-card:hover {
+      background: rgba(255, 255, 255, 0.3);
+      border-color: #fff;
+      transform: translateY(-3px) rotate(-1deg) scale(1.02);
+    }
+
+    .activity-card.selected {
+      background: rgba(255, 255, 255, 0.45);
+      border-color: #ffe066;
+      transform: scale(1.04);
+      box-shadow: 0 0 20px rgba(255, 224, 102, 0.5);
+      animation: selected-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes selected-pop {
+      0% { transform: scale(0.9); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1.04); }
+    }
+
+    .activity-icon {
+      font-size: 1.6rem;
+      flex-shrink: 0;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .activity-card.selected .activity-icon,
+    .activity-card:hover .activity-icon {
+      transform: scale(1.25) rotate(-8deg);
+    }
+
+    .activity-name {
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    .step-hint {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.85rem;
+      margin-bottom: 0.75rem;
+      animation: hint-bounce 2s ease-in-out infinite;
+    }
+
+    @keyframes hint-bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-3px); }
+    }
+
+    .confirm-wrap { margin-top: 1rem; }
+
+    .burst {
+      position: fixed;
+      pointer-events: none;
+      z-index: 200;
+      font-size: 1.2rem;
+      animation: burst-fly 0.8s ease-out forwards;
+    }
+
+    @keyframes burst-fly {
+      0% { opacity: 1; transform: translate(0, 0) scale(1); }
+      100% { opacity: 0; transform: translate(var(--bx), var(--by)) scale(0.3) rotate(180deg); }
+    }
+
+    .confirm-wrap .btn {
+      width: 100%;
+      max-width: 320px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        align-items: flex-start;
+        padding-top: max(0.75rem, env(safe-area-inset-top));
+      }
+
+      .card {
+        width: calc(100% - 1rem);
+        max-width: none;
+        padding: 1.35rem 1.1rem 1.5rem;
+        border-radius: 24px;
+        margin: 0.5rem auto;
+      }
+
+      .card.wide {
+        width: calc(100% - 0.5rem);
+        padding: 1.25rem 0.95rem 1.4rem;
+      }
+
+      .progress { margin-bottom: 1rem; }
+
+      .emoji { font-size: clamp(2.5rem, 10vw, 3.5rem); }
+
+      h1 {
+        font-size: clamp(1.25rem, 5.5vw, 1.55rem);
+        line-height: 1.3;
+      }
+
+      .celebration h1 { font-size: clamp(1.4rem, 6vw, 1.75rem); }
+
+      .subtitle {
+        font-size: clamp(0.88rem, 3.8vw, 0.98rem);
+        margin-bottom: 1rem;
+        line-height: 1.55;
+      }
+
+      .anniversary-badge {
+        font-size: 0.72rem;
+        padding: 0.35rem 0.85rem;
+      }
+
+      .dodge-arena { min-height: 100px; }
+
+      .buttons {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        width: 100%;
+      }
+
+      .btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+      }
+
+      .btn-yes:hover:not(:disabled) {
+        transform: none;
+        box-shadow: 0 8px 0 #c44569, 0 12px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .activity-scroll {
+        max-height: min(42vh, 340px);
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .activity-grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+
+      .activity-name { font-size: 0.82rem; }
+      .restaurant-card .activity-name { font-size: 0.8rem; }
+
+      .activity-card:hover {
+        transform: none;
+      }
+
+      .location-name { font-size: 0.8rem; }
+      .location-sub { font-size: 0.68rem; }
+
+      .chosen-activity {
+        font-size: 0.78rem;
+        padding: 0.4rem 0.75rem;
+      }
+
+      .confirm-wrap .btn {
+        max-width: none;
+        font-size: 0.95rem;
+        padding: 0.85rem 1.25rem;
+      }
+
+      .pick-counter { font-size: 0.8rem; }
+      .step-hint { font-size: 0.8rem; }
+      .celebration p { font-size: 0.92rem; }
+    }
+
+    @media (max-width: 380px) {
+      .card {
+        width: calc(100% - 0.5rem);
+        padding: 1.15rem 0.85rem 1.3rem;
+      }
+
+      .btn {
+        font-size: 0.92rem;
+        padding: 0.75rem 1.2rem;
+      }
+
+      .btn-no.dodging {
+        font-size: 0.72rem;
+        padding: 0.4rem 0.8rem;
+      }
+    }
+
+    @media (hover: none) {
+      .activity-card.selected .activity-icon,
+      .activity-card:active .activity-icon {
+        transform: scale(1.2) rotate(-8deg);
+      }
+
+      .activity-card:active {
+        background: rgba(255, 255, 255, 0.35);
+        transform: scale(0.98);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts" id="hearts"></div>
+
+  <div class="card" id="card">
+    <div class="progress" id="progress">
+      <div class="progress-dot active" data-step="0"></div>
+      <div class="progress-dot" data-step="1"></div>
+      <div class="progress-dot" data-step="2"></div>
+      <div class="progress-dot" data-step="3"></div>
+    </div>
+
+    <div class="step invitation show" id="invitation">
+      <div class="emoji" id="mainEmoji">💍</div>
+      <div class="anniversary-badge">2 Years Together 🎉</div>
+      <h1>Angel, will you be my date<br>for our anniversary?</h1>
+      <p class="subtitle">
+        Two years with you, my <span class="name">Angel</span>…<br>
+        and every day still feels like the beginning! ✨<br>
+        Let me take you somewhere special to celebrate us.
+      </p>
+      <div class="dodge-arena" id="dodgeArena"></div>
+      <div class="button-stage">
+        <div class="buttons" id="yesNoButtons">
+          <button class="btn btn-yes" id="btnYes">Yes! 💕</button>
+          <button class="btn btn-no" id="btnNo">No 😏</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="step activities" id="activities">
+      <div class="emoji">🎡</div>
+      <h1>Pick our adventure, Angel!</h1>
+      <p class="subtitle" style="margin-bottom: 0.75rem;">So many fun things… go wild! 🎢</p>
+      <div class="pick-counter" id="activityCounter">0 picked</div>
+
+      <div class="location-header park-header">
+        <div class="location-name">SM by the BAY Amusement Park</div>
+        <div class="location-sub">Thrill rides · & more</div>
+      </div>
+
+      <p class="step-hint">👆 Tap as many as you want!</p>
+      <div class="activity-scroll" id="activityList"></div>
+
+      <div class="confirm-wrap">
+        <button class="btn btn-yes" id="btnConfirmActivities" disabled>Next — I'm hungry! 🍽️</button>
+      </div>
+    </div>
+
+    <div class="step restaurants" id="restaurants">
+      <div class="emoji">🍽️</div>
+      <h1>Now pick where we eat!</h1>
+      <p class="subtitle" style="margin-bottom: 0.75rem;">All that fun made you hungry, right? 😋</p>
+      <div class="pick-counter" id="restaurantCounter">0 picked</div>
+
+      <div class="location-header restaurant-header">
+        <div class="location-name">SM Mall of Asia</div>
+        <div class="location-sub">Restaurants & cafés</div>
+      </div>
+
+      <p class="step-hint">👆 Tap your cravings!</p>
+      <div class="activity-scroll" id="restaurantList"></div>
+
+      <div class="confirm-wrap">
+        <button class="btn btn-yes" id="btnConfirmRestaurants" disabled>Yay! It's a date! 💕</button>
+      </div>
+    </div>
+
+    <div class="step celebration" id="celebration">
+      <div class="emoji">🥰</div>
+      <div class="sparkle">✨ 💖 ✨</div>
+      <h1>It's a date, Angel!</h1>
+      <div class="summary-section">
+        <div class="summary-label">🎢 Our Adventures</div>
+        <div class="chosen-activities" id="chosenActivities"></div>
+      </div>
+      <div class="summary-section">
+        <div class="summary-label">🍽️ Where We'll Eat</div>
+        <div class="chosen-activities" id="chosenRestaurants"></div>
+      </div>
+      <p>
+        Two years down, forever to go! 🥳<br>
+        I can't wait to celebrate our love with you. 💕<br>
+        I'll text you all the details soon, my Angel.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const categoryIcons = {
+      'Our Date': '⛸️', 'Family Rides': '🎡', 'Thrill Rides': '🎢',
+      'Filipino': '🇵🇭', 'American / Western': '🍔', 'Italian': '🍝',
+      'Japanese': '🍱', 'Chinese / Taiwanese / Hong Kong': '🥟', 'Korean': '🥩',
+      'Thai / Southeast Asian': '🍜', 'Hotpot / Shabu-Shabu': '🫕', 'Buffets': '🍽️',
+      'Chicken / Casual Dining': '🍗', 'Burgers / Fast Food': '🍟', 'Pizza': '🍕',
+      'Cafés & Desserts': '☕',
+    };
+
+    const activities = [
+      { category: 'Our Date', name: 'Ice Skating', icon: '⛸️' },
+      { category: 'Family Rides', name: 'Bumble Bee', icon: '🐝' },
+      { category: 'Family Rides', name: 'Barn Stormer', icon: '🌪️' },
+      { category: 'Family Rides', name: 'Bumper Car', icon: '🚗' },
+      { category: 'Family Rides', name: 'Rocking Tug', icon: '⛵' },
+      { category: 'Family Rides', name: 'Galleon Ship', icon: '🏴‍☠️' },
+      { category: 'Family Rides', name: 'Wonder Flight', icon: '✈️' },
+      { category: 'Family Rides', name: 'Funny Swing', icon: '🎠' },
+      { category: 'Family Rides', name: 'Toy Swing', icon: '🪀' },
+      { category: 'Family Rides', name: 'Grand Carousel', icon: '🎠' },
+      { category: 'Family Rides', name: 'Road Train', icon: '🚂' },
+      { category: 'Family Rides', name: 'MOA Eye', icon: '🎡' },
+      { category: 'Thrill Rides', name: 'Drop Tower', icon: '🗼' },
+      { category: 'Thrill Rides', name: 'Pirate Ship', icon: '⚓' },
+      { category: 'Thrill Rides', name: 'Dream Twister', icon: '🌀' },
+      { category: 'Thrill Rides', name: 'Magic Dance', icon: '💃' },
+    ];
+
+    const restaurants = [
+      { category: 'Filipino', name: 'Manam Comfort Filipino' },
+      { category: 'Filipino', name: "Max's Restaurant | SM Mall of Asia" },
+      { category: 'Filipino', name: 'The Aristocrat Restaurant - SM Mall of Asia' },
+      { category: 'Filipino', name: 'Mesa Filipino Moderne' },
+      { category: 'Filipino', name: 'Mang Inasal' },
+      { category: 'Filipino', name: 'Kuya J' },
+      { category: 'Filipino', name: 'Cabalen' },
+      { category: 'American / Western', name: "Chili's" },
+      { category: 'American / Western', name: 'TGI Fridays' },
+      { category: 'American / Western', name: 'Hard Rock Cafe Manila' },
+      { category: 'American / Western', name: "Denny's" },
+      { category: 'American / Western', name: "Buffalo's Wings N' Things" },
+      { category: 'American / Western', name: 'Olive Garden - Mall of Asia' },
+      { category: 'American / Western', name: 'Wildflour Restaurant - SM Mall of Asia' },
+      { category: 'American / Western', name: 'LongHorn Steakhouse' },
+      { category: 'American / Western', name: 'Texas Roadhouse' },
+      { category: 'Italian', name: "Italianni's Restaurant" },
+      { category: 'Italian', name: 'Olive Garden - Mall of Asia' },
+      { category: 'Italian', name: 'Amici' },
+      { category: 'Japanese', name: 'Yabu: House of Katsu SM MOA' },
+      { category: 'Japanese', name: 'Ramen Kuroda' },
+      { category: 'Japanese', name: 'Tonkotsu Kazan' },
+      { category: 'Japanese', name: 'Botejyu' },
+      { category: 'Japanese', name: 'Gyukatsu Kyoto Katsugyu' },
+      { category: 'Japanese', name: 'Tokyo Tokyo' },
+      { category: 'Japanese', name: 'Marugame Udon' },
+      { category: 'Japanese', name: 'Sukiya' },
+      { category: 'Japanese', name: 'Yayoi' },
+      { category: 'Chinese / Taiwanese / Hong Kong', name: 'Din Tai Fung' },
+      { category: 'Chinese / Taiwanese / Hong Kong', name: 'Tim Ho Wan' },
+      { category: 'Chinese / Taiwanese / Hong Kong', name: 'Lugang Café' },
+      { category: 'Chinese / Taiwanese / Hong Kong', name: 'Paradise Dynasty' },
+      { category: 'Chinese / Taiwanese / Hong Kong', name: 'Panda Express' },
+      { category: 'Chinese / Taiwanese / Hong Kong', name: 'Monga SM Mall of Asia - Taiwanese Street Food' },
+      { category: 'Chinese / Taiwanese / Hong Kong', name: 'Gloria Maris' },
+      { category: 'Chinese / Taiwanese / Hong Kong', name: "Mak's Noodle" },
+      { category: 'Korean', name: 'Romantic Baboy' },
+      { category: 'Korean', name: 'Soban K-Town Grill' },
+      { category: 'Korean', name: 'Samgyupsalamat' },
+      { category: 'Thai / Southeast Asian', name: 'Greyhound Café SM Mall of Asia' },
+      { category: 'Thai / Southeast Asian', name: 'Pho Hoa' },
+      { category: 'Thai / Southeast Asian', name: 'Jatujak' },
+      { category: 'Hotpot / Shabu-Shabu', name: 'Haidilao Hot Pot' },
+      { category: 'Hotpot / Shabu-Shabu', name: 'Jiang Nan Hotpot' },
+      { category: 'Hotpot / Shabu-Shabu', name: 'Tong Yang, SM Mall of Asia' },
+      { category: 'Hotpot / Shabu-Shabu', name: 'Shaburo 21' },
+      { category: 'Buffets', name: 'Vikings Luxury Buffet, SM Mall of Asia' },
+      { category: 'Buffets', name: 'Buffet 101' },
+      { category: 'Buffets', name: 'Tong Yang, SM Mall of Asia' },
+      { category: 'Chicken / Casual Dining', name: 'Kenny Rogers Roasters' },
+      { category: 'Chicken / Casual Dining', name: 'Peri-Peri Charcoal Chicken' },
+      { category: 'Chicken / Casual Dining', name: 'Gringo' },
+      { category: 'Chicken / Casual Dining', name: 'BonChon' },
+      { category: 'Chicken / Casual Dining', name: '24 Chicken' },
+      { category: 'Burgers / Fast Food', name: 'Shake Shack' },
+      { category: 'Burgers / Fast Food', name: 'Burger King' },
+      { category: 'Burgers / Fast Food', name: "McDonald's" },
+      { category: 'Burgers / Fast Food', name: 'Jollibee' },
+      { category: 'Burgers / Fast Food', name: "Wendy's" },
+      { category: 'Burgers / Fast Food', name: 'Five Guys' },
+      { category: 'Burgers / Fast Food', name: 'Army Navy' },
+      { category: 'Pizza', name: "Shakey's" },
+      { category: 'Pizza', name: 'Pizza Hut' },
+      { category: 'Pizza', name: 'Yellow Cab' },
+      { category: 'Pizza', name: 'Sbarro' },
+      { category: 'Cafés & Desserts', name: 'Starbucks' },
+      { category: 'Cafés & Desserts', name: 'Coffee Bean & Tea Leaf' },
+      { category: 'Cafés & Desserts', name: 'Tim Hortons' },
+      { category: 'Cafés & Desserts', name: 'Krispy Kreme' },
+      { category: 'Cafés & Desserts', name: "Conti's" },
+      { category: 'Cafés & Desserts', name: 'Mary Grace' },
+      { category: 'Cafés & Desserts', name: 'Macao Imperial Tea' },
+      { category: 'Cafés & Desserts', name: 'Chatime' },
+      { category: 'Cafés & Desserts', name: 'Gong Cha' },
+    ];
+
+    const heartsContainer = document.getElementById('hearts');
+    const emojis = ['💕', '💖', '💗', '✨', '🌸', '💘', '🦋', '⭐'];
+    const heartCount = window.matchMedia('(max-width: 600px)').matches ? 18 : 35;
+    for (let i = 0; i < heartCount; i++) {
+      const heart = document.createElement('span');
+      heart.className = 'heart';
+      heart.textContent = emojis[i % emojis.length];
+      heart.style.left = Math.random() * 100 + '%';
+      heart.style.fontSize = (0.9 + Math.random() * 1.4) + 'rem';
+      heart.style.animationDuration = (6 + Math.random() * 10) + 's';
+      heart.style.animationDelay = Math.random() * 8 + 's';
+      heartsContainer.appendChild(heart);
+    }
+
+    const card = document.getElementById('card');
+    const invitation = document.getElementById('invitation');
+    const activitiesStep = document.getElementById('activities');
+    const restaurantsStep = document.getElementById('restaurants');
+    const celebration = document.getElementById('celebration');
+    const activityList = document.getElementById('activityList');
+    const restaurantList = document.getElementById('restaurantList');
+    const btnYes = document.getElementById('btnYes');
+    const btnNo = document.getElementById('btnNo');
+    const dodgeArena = document.getElementById('dodgeArena');
+    const btnConfirmActivities = document.getElementById('btnConfirmActivities');
+    const btnConfirmRestaurants = document.getElementById('btnConfirmRestaurants');
+    const chosenActivitiesEl = document.getElementById('chosenActivities');
+    const chosenRestaurantsEl = document.getElementById('chosenRestaurants');
+    const activityCounter = document.getElementById('activityCounter');
+    const restaurantCounter = document.getElementById('restaurantCounter');
+    const progressDots = document.querySelectorAll('.progress-dot');
+
+    const steps = [invitation, activitiesStep, restaurantsStep, celebration];
+    const selectedActivities = new Set();
+    const selectedRestaurants = new Set();
+
+    function itemKey(item) { return `${item.category}::${item.name}`; }
+
+    function updateProgress(index) {
+      progressDots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+        dot.classList.toggle('done', i < index);
+      });
+    }
+
+    function showStep(step) {
+      const index = steps.indexOf(step);
+      steps.forEach(s => s.classList.remove('show'));
+      step.classList.add('show');
+      const isPicker = step === activitiesStep || step === restaurantsStep;
+      card.classList.toggle('wide', isPicker);
+      updateProgress(index);
+      card.classList.remove('shake');
+      void card.offsetWidth;
+      card.classList.add('shake');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function spawnBurst(x, y, chars = ['💕', '✨', '💖']) {
+      for (let i = 0; i < 6; i++) {
+        const el = document.createElement('span');
+        el.className = 'burst';
+        el.textContent = chars[i % chars.length];
+        const angle = (Math.PI * 2 * i) / 6;
+        const dist = 40 + Math.random() * 30;
+        el.style.left = x + 'px';
+        el.style.top = y + 'px';
+        el.style.setProperty('--bx', Math.cos(angle) * dist + 'px');
+        el.style.setProperty('--by', Math.sin(angle) * dist + 'px');
+        document.body.appendChild(el);
+        setTimeout(() => el.remove(), 800);
+      }
+    }
+
+    function updateCounter(counterEl, count, label) {
+      counterEl.textContent = count === 0 ? '0 picked' : `${count} ${label}${count > 1 ? 's' : ''} picked! 🎉`;
+      counterEl.classList.toggle('show', count > 0);
+    }
+
+    function renderPicker(items, container, selectedSet, confirmBtn, counterEl, label, options = {}) {
+      const { hideCategories = [], singleColumn = false, useCategoryIcon = false } = options;
+      const categories = [...new Set(items.map(a => a.category))];
+      container.innerHTML = '';
+      let stagger = 0;
+
+      categories.forEach(category => {
+        if (!hideCategories.includes(category)) {
+          const catLabel = document.createElement('div');
+          catLabel.className = 'category-label';
+          catLabel.textContent = category;
+          container.appendChild(catLabel);
+        }
+
+        const grid = document.createElement('div');
+        grid.className = singleColumn ? 'activity-grid restaurant-grid' : 'activity-grid';
+
+        items.filter(a => a.category === category).forEach(item => {
+          const icon = item.icon || (useCategoryIcon ? categoryIcons[category] : '🍽️');
+          const cardEl = document.createElement('button');
+          cardEl.type = 'button';
+          cardEl.className = singleColumn ? 'activity-card restaurant-card' : 'activity-card';
+          cardEl.style.animationDelay = (stagger++ * 0.03) + 's';
+          cardEl.innerHTML = `
+            <span class="activity-icon">${icon}</span>
+            <div class="activity-info"><div class="activity-name">${item.name}</div></div>
+          `;
+          if (selectedSet.has(itemKey(item))) cardEl.classList.add('selected');
+
+          cardEl.addEventListener('click', (e) => {
+            const key = itemKey(item);
+            const selecting = !selectedSet.has(key);
+            if (selecting) {
+              selectedSet.add(key);
+              cardEl.classList.add('selected');
+              spawnBurst(e.clientX, e.clientY, [icon, '💕', '✨']);
+            } else {
+              selectedSet.delete(key);
+              cardEl.classList.remove('selected');
+            }
+            confirmBtn.disabled = selectedSet.size === 0;
+            updateCounter(counterEl, selectedSet.size, label);
+            if (selectedSet.size > 0) {
+              confirmBtn.textContent = label === 'ride'
+                ? `Next — ${selectedSet.size} ride${selectedSet.size > 1 ? 's' : ''} & I'm hungry! 🍽️`
+                : `Yay! ${selectedSet.size} spot${selectedSet.size > 1 ? 's' : ''} — it's a date! 💕`;
+            } else {
+              confirmBtn.textContent = label === 'ride'
+                ? "Next — I'm hungry! 🍽️"
+                : "Yay! It's a date! 💕";
+            }
+          });
+          grid.appendChild(cardEl);
+        });
+        container.appendChild(grid);
+      });
+    }
+
+    function renderChips(items, selectedSet, container) {
+      container.innerHTML = '';
+      items.filter(a => selectedSet.has(itemKey(a))).forEach((a, i) => {
+        const chip = document.createElement('span');
+        chip.className = 'chosen-activity';
+        chip.style.animationDelay = (i * 0.08) + 's';
+        const icon = a.icon || categoryIcons[a.category] || '🍽️';
+        chip.textContent = `${icon} ${a.name}`;
+        container.appendChild(chip);
+      });
+    }
+
+    let noIsDodging = false;
+
+    function startNoDodge() {
+      if (!noIsDodging) {
+        noIsDodging = true;
+        btnNo.classList.add('dodging');
+        dodgeArena.appendChild(btnNo);
+      }
+      moveNoAway();
+    }
+
+    function moveNoAway() {
+      const noW = btnNo.offsetWidth || 80;
+      const noH = btnNo.offsetHeight || 36;
+      const pad = 8;
+      const arenaW = dodgeArena.clientWidth;
+      const arenaH = dodgeArena.clientHeight;
+      const maxY = arenaH - noH - pad;
+
+      const zones = [
+        () => ({ x: pad, y: pad }),
+        () => ({ x: arenaW - noW - pad, y: pad }),
+        () => ({ x: (arenaW - noW) / 2, y: pad }),
+        () => ({ x: pad, y: pad + Math.random() * Math.max(maxY - pad, 10) }),
+        () => ({ x: arenaW - noW - pad, y: pad + Math.random() * Math.max(maxY - pad, 10) }),
+      ];
+
+      const pick = zones[Math.floor(Math.random() * zones.length)];
+      let { x, y } = pick();
+      y = Math.min(y, maxY);
+
+      btnNo.style.left = x + 'px';
+      btnNo.style.top = y + 'px';
+      const taunts = ['Nope! 😜', 'Try again!', 'Not today!', 'Nah-uh!', 'No 😏', 'Catch me!'];
+      btnNo.textContent = taunts[Math.floor(Math.random() * taunts.length)];
+    }
+
+    btnNo.addEventListener('mouseenter', startNoDodge);
+    btnNo.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      startNoDodge();
+    }, { passive: false });
+    btnNo.addEventListener('click', (e) => { e.preventDefault(); startNoDodge(); });
+
+    btnYes.addEventListener('click', (e) => {
+      spawnBurst(e.clientX, e.clientY, ['💕', '💖', '✨', '🥰']);
+      showStep(activitiesStep);
+    });
+
+    btnConfirmActivities.addEventListener('click', (e) => {
+      if (selectedActivities.size === 0) return;
+      spawnBurst(e.clientX, e.clientY, ['🎡', '🎢', '✨']);
+      showStep(restaurantsStep);
+    });
+
+    btnConfirmRestaurants.addEventListener('click', (e) => {
+      if (selectedRestaurants.size === 0) return;
+      renderChips(activities, selectedActivities, chosenActivitiesEl);
+      renderChips(restaurants, selectedRestaurants, chosenRestaurantsEl);
+      showStep(celebration);
+      launchConfetti();
+      spawnBurst(e.clientX, e.clientY, ['🥰', '💕', '🎉', '💖']);
+    });
+
+    function launchConfetti() {
+      const pieces = ['💕', '💖', '✨', '🌸', '🎉', '⭐', '💘', '🦋'];
+      for (let i = 0; i < 100; i++) {
+        setTimeout(() => {
+          const piece = document.createElement('div');
+          piece.textContent = pieces[i % pieces.length];
+          piece.className = 'burst';
+          piece.style.left = (20 + Math.random() * 60) + '%';
+          piece.style.top = '-30px';
+          piece.style.fontSize = (16 + Math.random() * 20) + 'px';
+          piece.style.setProperty('--bx', ((Math.random() - 0.5) * 200) + 'px');
+          piece.style.setProperty('--by', (window.innerHeight + 50) + 'px');
+          piece.style.animationDuration = (2 + Math.random() * 2) + 's';
+          document.body.appendChild(piece);
+          setTimeout(() => piece.remove(), 4000);
+        }, i * 25);
+      }
+    }
+
+    renderPicker(activities, activityList, selectedActivities, btnConfirmActivities, activityCounter, 'ride', {
+      hideCategories: ['Family Rides'],
+    });
+    renderPicker(restaurants, restaurantList, selectedRestaurants, btnConfirmRestaurants, restaurantCounter, 'spot', {
+      singleColumn: true,
+      useCategoryIcon: true,
+    });
+  </script>
+</body>
+</html>
